@@ -1,0 +1,155 @@
+/* Opening Section */
+section#opening {
+
+	.oedi {
+		width:200px;
+		height:300px;
+	}
+
+	.leia {
+		width: 190px;
+	    height: 250px;
+	}
+
+	.yoda {
+		width:220px;
+		height:250px;
+		background-position:0px 50px;
+	}
+
+	.luke {
+		width:200px;
+		height:250px;
+	}
+
+	.han {
+		width: 185px;
+	    height: 250px;
+	}
+}
+
+/* Quiz Section */
+section#quiz {
+
+	.container {
+		padding:25px 0px 0px 0px;
+	}
+
+	.quiz_container {
+		width:90%;
+		margin:5px auto 10px auto;
+		padding:5px 5px 20px 5px;
+	}
+
+	.battle_container {
+		width:100%;
+		min-height:400px;
+	}
+
+	#oedi-wan {
+		width:175px;
+		height:225px;
+		left:30%;
+	}
+
+	#oedi {
+		width:200px;
+		height:300px;
+	    bottom: 25px;
+	}
+
+	.leia {
+		bottom: 5px;
+	    left: -8px;
+
+	    .blaster {
+	    	top: 167px;
+    		left: 173px;
+	    }
+	}
+
+	.yoda {
+	    .blaster {
+	    	top: 130px;
+    		left: 178px;
+	    }
+	}
+
+	.luke {
+	    .blaster {
+	    	top: 150px;
+			left: 177px;
+	    }
+	}
+
+	.han {
+	    .blaster {
+	    	top: 155px;
+    		left: 177px;
+	    }
+	}
+
+	.blaster {
+		width:100px;
+		height:100px;
+	}
+
+	.lazer {
+	    top: 10px;
+	    left: 100px;
+	}
+
+	.jabba_container {
+		max-width:550px;
+	}
+
+	#jabba {
+		right: 0%;
+		bottom: 18%;
+	}
+
+	.mouth {
+	    top: 56px;
+	    right: -345px;
+	    width: 20%;
+	    height: 10%;
+	    position: relative;
+	}
+
+	#platform {
+		right:12%;
+	}
+
+	.captured_principles_container {
+	}
+
+	.chain1 {
+		width:70px;
+		height:70px;
+		top: 15px;
+	}
+
+	.chain2 {
+		width: 63px;
+	    height: 65px;
+	    top: -62px;
+	    left: 3px;
+	}
+
+	.lock {
+		width: 20px;
+	    height: 20px;
+	    top: -88px;
+	    left: 50%;
+	}
+
+	.flex-container {
+	  padding: 0px 10px 0px 0px;
+	}
+
+	.flex-item {
+		width: 70px;
+		height: 70px;
+	    margin-top: 10px;
+	}
+}

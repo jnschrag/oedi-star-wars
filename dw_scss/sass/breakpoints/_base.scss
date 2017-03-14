@@ -1,0 +1,402 @@
+body {
+	padding:0px;
+	margin:0px;
+	@include starWarsBackground;
+}
+
+/* OEDI Default Page Template */
+.navbar {
+	margin-bottom:0px;
+}
+
+footer {
+	margin-top:0px;
+}
+
+
+/* Helper CSS Classes */
+.padding0 {padding:0px;}
+.margin-center {margin:0 auto;}
+
+/* Social Media & Refresh Buttons */
+.social-media-container {width:100%;padding: 10px 5px;}
+.refresh {float:right;}
+.whitebg {background-color:$white;}
+
+
+/* Opening Section */
+section#opening {
+	color:$yellow;
+
+	h1 {
+		font-size: 6em;
+		margin:0px auto .2em auto;
+		padding:0;
+	    text-align:center;
+	    font-family:StarWars;
+	    letter-spacing: 8px;
+	}
+
+	p {
+		text-align:left;
+		font-size: 1.2em;
+	}
+
+	.container {
+		width:90%;
+		padding:10px 25px;
+		margin:5px auto;
+	}
+
+	.char-error {
+		font-weight:bold;
+		text-decoration:underline;
+		text-transform: uppercase;
+	}
+
+	.oedi {
+		width:200px;
+		height:300px;
+		background:url('../../dw_img/robot_blaster_pose.svg') no-repeat;
+	}
+
+	.leia {
+		width: 190px;
+	    height: 250px;
+		background:url("../../dw_img/leia.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	.yoda {
+		width:220px;
+		height:250px;
+		background:url("../../dw_img/yoda.svg") no-repeat;
+		cursor: pointer;
+		background-position:0px 50px;
+	}
+
+	.luke {
+		width:200px;
+		height:250px;
+		background:url("../../dw_img/luke.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	.han {
+		width: 185px;
+	    height: 250px;
+		background:url("../../dw_img/han.svg") no-repeat;
+		cursor: pointer;
+	}
+
+	#play {
+		display:block;
+		padding:1%;
+		margin:10px auto;
+		background-color:$yellow;
+		color:$white;
+		font-weight:bold;
+		border:0px;
+		font-size:2em;
+		text-transform: uppercase;
+	}
+
+}
+
+/* Quiz Section */
+section#quiz {
+	display:none;
+	background-color: $white;
+	overflow:hidden;
+
+	.container {
+		width:100%;
+		padding:25px 0px 0px 0px;
+		margin:0px;
+	}
+
+	.quiz_container {
+		width:90%;
+		margin:5px auto 10px auto;
+		padding:5px 5px 20px 5px;
+	}
+
+	.battle_container {
+		width:100%;
+		position: relative;
+		min-height:200px;
+	}
+
+	#oedi-wan {
+		width: 100px;
+	    height: 100px;
+	    background: url("../../dw_img/oedi-wan-saber.svg") no-repeat;
+	    display: none;
+	    position: absolute;
+	    left: 40%;
+	    top: -25%;
+	}
+
+	#oedi {
+		width: 100px;
+	    height: 100%;
+	    position: absolute;
+	    left: 5%;
+	    bottom: 25px;
+	}
+
+	.active-character {
+		display:block !important;
+	}
+
+	.leia {
+		background:url("../../dw_img/leia_wrobot.svg") no-repeat;
+		width:100%;
+		height:100%;
+		z-index:5;
+		position:relative;
+		bottom: 5px;
+	    left: -8px;
+	    display:none;
+
+	    .blaster {
+	    	top: 76px;
+    		left: 89px;
+	    }
+	}
+
+	.yoda {
+		background:url("../../dw_img/yoda_wrobot.svg") no-repeat;
+		width: 100%;
+	    height: 100%;
+	    z-index: 5;
+	    display: none; 
+	    position: relative;
+
+	    .blaster {
+		    top: 65px;
+	    	left: 89px;
+	    }
+	}
+
+	.luke {
+		background:url("../../dw_img/luke_wrobot.svg") no-repeat;
+		width: 100%;
+	    height: 100%;
+	    z-index: 5;
+	    display: none; 
+	    position: relative;
+
+	    .blaster {
+	    	top: 75px;
+    		left: 90px;
+	    }
+	}
+
+	.han {
+		background:url("../../dw_img/han_wrobot.svg") no-repeat;
+		width: 100%;
+	    height: 100%;
+	    z-index: 5;
+	    display: none; 
+	    position: relative;
+
+	    .blaster {
+	    	top: 78px;
+    		left: 88px;
+	    }
+	}
+
+	.blaster {
+		background:url("../../dw_img/blaster.svg") no-repeat;
+		width:50px;
+		height:50px;
+		z-index:10;
+		position:absolute;
+	}
+
+	.lazer {
+		height: .1em;
+	  	width: 2em;
+		background-color:red;
+		-webkit-box-shadow: 1px 1px 15px 3px #ff0000;
+		box-shadow: 1px 1px 15px 3px #ff0000;
+		position: relative;
+	    top: 10px;
+	    left: 100px;
+	    z-index: 5;
+	}
+
+	.shot0, .shot1, .shot2 {display:none;}
+
+	.jabba_container {
+		transform-origin: 0% 100%;
+	    width: 50%;
+	    height: 100%;
+	    position: absolute;
+	    right: 0;
+	    bottom: 0;
+	}
+
+	#jabba {
+		width: 100%;
+	    height: 78%;
+	    // background: url("../../dw_img/jabba_nomouth.svg") no-repeat;
+	    background-position: 0 100%;
+	    position: absolute;
+	    right: -50%;
+	    z-index: 10;
+	    transform: scaleX(-1);
+	}
+
+	.mouth {
+		position: absolute;
+	    top: 71px;
+	    right: 60px;
+	    z-index: 12;
+	    width: 150px;
+	    height: 150px;
+	}
+
+	.smile {
+		background: url('../../dw_img/jabba_smile.svg') no-repeat;
+	}
+
+	.frown {
+		background: url('../../dw_img/jabba_frown.svg') no-repeat;
+	}
+
+	#platform {
+		width: 100%;
+	    height: 30%;
+	    background: url("../../dw_img/jabba_platform.svg") no-repeat;
+	    position: absolute;
+	    right: -35%;
+	    bottom: 0;
+	    transform: scaleX(-1);
+	}
+
+	.captured_principles_container {
+		position:absolute;
+		bottom:0;
+		right:0;
+		width:60%;
+		z-index: 20;
+	}
+
+	.chain1 {
+		width: 40px;
+	    height: 40px;
+	    background: url("../../dw_img/chain1.svg") no-repeat;
+	    position: relative;
+	    z-index: 5;
+	    top: 15px;
+	}
+
+	.chain2 {
+		width: 38px;
+	    height: 45px;
+	    background: url("../../dw_img/chain2.svg") no-repeat;
+	    position: relative;
+	    z-index: 10;
+	    top: -36px;
+	    left: 3px;
+	}
+
+	.lock {
+		width: 20px;
+	    height: 20px;
+	    background: url("../../dw_img/chain_lock.svg") no-repeat;
+	    position: relative;
+	    z-index: 15;
+	    top: -58px;
+	    left: 50%;
+	}
+
+	.flex-container {
+	  padding: 0px 10px 0px 0px;
+	  list-style: none;
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-flow: row wrap;
+	  justify-content: space-around;
+	}
+
+	.flex-item {
+		border-radius: 50%;
+		width: 40px;
+    	height: 40px;
+	    margin-top: 10px;
+	    color: white;
+	    font-weight: bold;
+	    font-size: 3em;
+	    text-align: center;
+	    margin-left:auto;
+	    background-color:$gray;
+	}
+
+	// Captured Principles
+	.cp {
+		-webkit-animation: scared 0.8s infinite linear;
+		-webkit-transform-origin:50% 50%;
+		-moz-animation: scared 0.8s infinite linear;
+		-moz-transform-origin:50% 50%;
+		-o-animation: scared 0.8s infinite linear;
+		-o-transform-origin:50% 50%;
+	}
+
+	@for $i from 1 through 9 {
+		.cp:nth-of-type(#{$i}) {animation-delay: random(10) / 10 + s;}
+	}
+
+	// Dancing
+	.dance {
+		-webkit-animation: dancing 1s infinite linear;
+		-moz-animation: dancing 1s infinite linear;
+		-o-animation: dancing 1s infinite linear;
+	}
+
+	@for $i from 1 through 11 {
+		.dance:nth-of-type(#{$i}) {animation-delay: random(10) / 10 + s;}
+	}
+
+	.fp.dance {border:2px solid #003767;}
+	.fp a {display:block;height:100%;}
+
+	.principles_container {
+		text-align:center;
+	}
+
+	@each $principle in timely, granular, available, complete, analyzable, nondiscrim, nonprop, licensefree, permanent {
+	  .#{$principle} {
+	    background-image: url('../../dw_img/#{$principle}.svg');
+	    background-repeat: no-repeat;
+	    background-position-x: 0px;
+	  }
+	}
+
+	/* Quiz Form */
+	.q1, .q2 {
+		display:none;
+	}
+
+	.questions span {font-weight:bold;}
+
+	label {margin-left:5px;font-weight:normal;display:inline;}
+	.submit {margin-top:10px;}
+	.result {
+		display: inline-block;
+	    margin-left: 25px;
+	    font-weight:bold;
+	}
+	.right {color:$green;}
+
+	.wrong {
+		color:$red;
+	}
+
+	.congratulations {font-size:1.5em;}
+}

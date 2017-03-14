@@ -1,0 +1,25 @@
+/******************************************************************
+Site Name: OEDI May the Fourth Be With You Interactive
+Author: Jacqueline Schrag
+
+Stylesheet: Main Stylesheet
+
+******************************************************************/
+
+// PARTIALS
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/animations";
+
+// BASE (MOBILE SIZE/ < 768PX)
+@import "breakpoints/base";
+
+// TABLET & SMALLER LAPTOPS
+@media only screen and (min-width: 768px) {
+	@import "breakpoints/768up";
+}
+
+// DESKTOP
+@media only screen and (min-width: 992px) {
+	@import "breakpoints/992up";
+}

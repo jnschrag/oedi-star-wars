@@ -1,0 +1,21 @@
+/*********************
+COLORS
+*********************/
+
+$black:#000;
+$white:#fff;
+$gray:#ccc;
+$yellow:#FFE81F;
+$red:red;
+$green:green;
+
+/*********************
+FONTS
+*********************/
+
+@font-face {
+    font-family: StarWars;
+    src: url(../../dw_fonts/Starjedi.ttf);
+}
+
+$StarWars: StarWars, "Georgia";
